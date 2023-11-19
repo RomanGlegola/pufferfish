@@ -29,7 +29,7 @@ RUN mkdir -p /home/based/.config/fish \
     && chown -R based:based /home/based/.local/share
 
 # Install Essentials
-RUN pacman -Sy --noconfirm \
+RUN pacman -Syy --noconfirm \
     sudo \
     base-devel \ 
     tmux \
@@ -58,7 +58,7 @@ RUN pacman -Sy --noconfirm \
 
 
 # Install Programming Languages
-RUN pacman -Sy --noconfirm \
+RUN pacman -Syy --noconfirm \
     gcc \
     python \
     python3 \
@@ -79,7 +79,7 @@ RUN pacman -Sy --noconfirm \
     && yes | pacman -Scc
 
 # Install Dependencies
-RUN pacman -Sy --noconfirm \
+RUN pacman -Syy --noconfirm \
     sqlmap # webapp \
     masscan \
     hydra \
